@@ -1,4 +1,5 @@
 *__pycache__
 *.webassets-cache
 *.env
+*.sqlite3
 src/static/tmp
