@@ -7,4 +7,4 @@ def root():
     if request.method == 'POST':
         pass
     
-    return render_template("home.html")
+    return render_template("index.html")

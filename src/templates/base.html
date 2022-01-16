@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, inital-scale=1"/>
-        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}"/>
         
         {% assets "base_css" %}
             <link rel="stylesheet" href="{{ ASSET_URL }}"/>
@@ -13,16 +13,19 @@
             <script type="text/javascript" scr="{{ ASSET_URL }}"></script>
         {% endassets %}
 
+        {% block assets %} 
+        {% endblock %}
+
         <title>
             {% block title %}
-                Home 
             {% endblock %}
         </title>
+        
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid bg-dark h-100">
             {% block content %} 
-            
+                
             {% endblock %}
         </div>
     </body>

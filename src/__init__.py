@@ -11,6 +11,7 @@ from .util.database import init_database, deinit_database
 # Create a flask instance
 app = Flask(__name__)
 
+
 # Create an app instance
 def create_app():
 
@@ -30,8 +31,3 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
 
     return app
-
-# App teardown deinits database
-@app.teardown_appcontext
-def teardown_event():
-    deinit_database()
