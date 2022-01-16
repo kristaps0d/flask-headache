@@ -1,0 +1,33 @@
+@font-face {
+	font-family: Montserrat;
+	src: url('../assets/fonts/Montserrat.ttf');
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url('../assets/fonts/Poppins.ttf');
+}
+
+h1 {
+    font-family: Montserrat;
+}
+
+h2 {
+    font-family: Montserrat;
+}
+
+h3 {
+    font-family: Montserrat;
+}
+
+h4 {
+    font-family: Poppins;
+}
+
+p {
+    font-family: Poppins;
+}
+
+label {
+	font-family: Poppins;
+}

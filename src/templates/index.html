@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+
+{% block title %}
+	Vote for your cause!
+{% endblock %} 
+
+{% block assets %}
+	{% assets "index_css" %}
+		<link rel="stylesheet" href="{{ ASSET_URL }}"/>
+	{% endassets %}
+{% endblock %}
+
+{% block content %}
+	<div class="container d-flex h-100 p-3 mx-auto flex-column text-light">
+
+		<div class="masthead mb-auto rows text-center">
+			
+		</div>
+
+		<div class="inner text-center p-5">
+			
+				<h1 class="display-3">
+					Make a change,
+				</h1>
+				
+				<h1 class="display-4">
+					vote for your cause!
+				</h1>
+
+				<input type="text" id="room"
+					class="form-control-lg w-50 mt-5 text-center" 
+				>
+
+				<p>
+					By using our services you agree to the 
+					<a href="" class="text-primary text-decoration-none">
+						terms of service.
+					</a>
+				</p>
+				
+		</div>
+		<div class="mastfoot text-center mt-auto">
+			<p class="">
+				<small>
+					Create your own room, 
+					<a href="/" class="text-primary text-decoration-none">
+						here!
+					</a>
+				</small>
+			</p>
+		</div>
+	</div>
+{% endblock %}
