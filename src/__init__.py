@@ -6,7 +6,7 @@ from os import getenv
 
 # Submodule imports
 from .util.assets import bundles
-from .util.database import init_database, deinit_database
+from .util.database import init_database
 
 # Create a flask instance
 app = Flask(__name__)

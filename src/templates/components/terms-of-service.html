@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+
+
+{% block title %}
+	Terms of service
+{% endblock %} 
+
+{% block assets %}
+    {% assets "tos_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+    {% endassets %}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container d-flex h-100 p-3 mx-auto flex-column text-dark">
+        <div class="text-center container-main">
+            <h1 class="display-3">Terms of service</h1>
+
+            <div class="container pt-4 w-75">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                    <a href="" class="text-primary text-decoration-none">aliqua.</a> Fringilla ut morbi tincidunt augue interdum velit euismod in. Placerat in egestas erat imperdiet sed euismod nisi porta. Bibendum est ultricies integer quis auctor elit sed vulputate. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id ornare arcu odio ut sem.
+                </p>
+                <p>
+                    Quis commodo odio aenean sed adipiscing diam donec adipiscing. In dictum non consectetur a erat nam at lectus 
+                    <a href="" class="text-primary text-decoration-none">urna.</a>
+                </p>
+                <p>
+                    Ultrices in iaculis nunc sed augue. Faucibus vitae aliquet nec ullamcorper. Proin nibh nisl condimentum id venenatis a condimentum vitae. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Ornare arcu dui vivamus arcu felis bibendum ut tristique et.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

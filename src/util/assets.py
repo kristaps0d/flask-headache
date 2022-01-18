@@ -14,9 +14,19 @@ bundles = {
 		filters='cssmin',
 		output='tmp/index.css'
 	),
+	'index_js': Bundle(
+		'assets/js/components/submit.js',
+		filters='cssmin',
+		output='tmp/src/index.js'
+	),
 	'index_css': Bundle(
 		'assets/css/components/index.css',
 		filters='cssmin',
 		output='tmp/src/landing.css'
+	),
+	'tos_css': Bundle(
+		'assets/css/components/terms-of-service.css',
+		filters='cssmin',
+		output='tmp/src/terms-of-service.css'
 	)
 }

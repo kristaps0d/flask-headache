@@ -11,14 +11,10 @@
 {% endblock %}
 
 {% block content %}
-	<div class="container d-flex h-100 p-3 mx-auto flex-column text-light">
+	<div class="container d-flex h-100 p-3 mx-auto flex-column text-dark">
 
-		<div class="masthead mb-auto rows text-center">
-			
-		</div>
-
-		<div class="inner text-center p-5">
-			
+		<div class="inner text-center container-main">
+		
 				<h1 class="display-3">
 					Make a change,
 				</h1>
@@ -27,13 +23,16 @@
 					vote for your cause!
 				</h1>
 
-				<input type="text" id="room"
-					class="form-control-lg w-50 mt-5 text-center" 
-				>
+				<form class="form-group" action="/room/join" method="post">
+					<input type="text" id="room"
+						class="form-control-lg mt-5 text-center w-d" 
+					>
+				</form>
+
 
 				<p>
 					By using our services you agree to the 
-					<a href="" class="text-primary text-decoration-none">
+					<a href="/terms-of-service" class="text-primary text-decoration-none">
 						terms of service.
 					</a>
 				</p>
@@ -50,4 +49,8 @@
 			</p>
 		</div>
 	</div>
+
+	{% assets "index_js" %}
+		<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	{% endassets %}
 {% endblock %}

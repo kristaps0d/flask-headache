@@ -1,3 +1,11 @@
-h1 {
-	font-size: 48px;
+.w-d {
+	width: 34rem
+}
+
+body {
+	color: rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important;
+}
+
+.container-main {
+	padding-top: 25vh;
 }

@@ -1,0 +1,7 @@
+.container-main {
+    padding-top: 22vh;
+}
+
+body {
+    color: rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important;
+}
