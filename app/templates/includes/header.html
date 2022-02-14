@@ -1,0 +1,32 @@
+<div class="wrapper">
+	<div class="nav">
+
+		<div class="nav-group">
+			<h1 class="nav-display">
+				<a href="">Iebalso.lv</a>
+			</h1>
+		</div>
+	
+		
+	
+		<div class="nav-group">
+	
+			<div class="btn-menu">
+				<input type="checkbox" id="btn-check"/>
+				<label class="btn-icon" for="btn-check">
+					<i></i>
+				</label>
+			</div>
+
+			<div class="static-menu" id="static-menu">
+				{% include 'components/links.html' %}
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="collapse-menu" id="collapse-menu">
+		{% include 'components/links.html' %}
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/header.js') }}"></script>
+</div>

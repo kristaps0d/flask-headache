@@ -1,25 +1,18 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/layout.html" %}
 
-{% block title %}
-	Pievienojies
-{% endblock %} 
+{% block stylesheet %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/index.css') }}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
 
 {% block content %}
-	<div class="my-3 p-3 bg-dark text-light rounded box-shadow py-5 h-50">
+	<div class="container">
 		
-		<div class="container bg-light text-dark rounded p-2">
-
-			<div class="container rounded bg-white">
-				<h1 class="display-5 text-center text-muted p-2">
-					Titula lapa
-				</h1>
-			</div>
-			
-			<div class="container input-group rounded">
-
-				<input type="text" class="form-control">
-				<button class="bg-warning">Pievienoties</button>
-			</div>
+		<div class="backdrop"></div>
+		<div class="input-group">
+			<input type="text" class="form-control">
+			<span class="button">search</span>
 		</div>
 		
 	</div>

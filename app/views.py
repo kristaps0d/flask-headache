@@ -11,3 +11,4 @@ from app import app
 @app.route('/<path>')
 def index(path):
 	return render_template('index.html')
+	#return render_template('voting.html')
