@@ -57,6 +57,7 @@
 	
 	/* Visual proporties */
 	background: none;
+	border: none;
 	border-radius: 8rem;
 	transition: 0.2s ease-out;
 }
