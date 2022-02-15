@@ -10,11 +10,8 @@
 
 		<link rel="icon" href="{{ url_for('static', filename='assets/img/favicon.svg') }}" type="image/svg+xml">
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/layouts/layout.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/includes/header.css') }}">
 
-		{% block stylesheet %}
-			
-		{% endblock %}
+		{% block stylesheet %}{% endblock %}
 	</head>
 	<body>
 		{% include 'includes/header.html' %}

@@ -7,21 +7,24 @@
 .nav {
 	/* Display proporties */
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	height: 5rem;
 
 	/* Visual proporties */
-	background-color: #1E2323;
-
-}
-
-.collapse-menu {
-	display: none;
+	background-color: #202124;
 }
 
 .nav .nav-group {
 	/* Display proporties */
-	padding: 0 1rem;
+	padding: 0 3rem;
+}
 
+.collapse-menu {
+	/* Display proporties */
+	display: none;
+	position: absolute;
+	margin-top: 5rem;
+	width: 100%;
 }
 
 .nav .nav-group .nav-display a {
@@ -33,6 +36,19 @@
 	/* Visual proporties */
 	color: #ffffff;
 	text-decoration: none;
+	transition: 0.2s ease-out;
+}
+
+.nav .nav-group .nav-display a:hover {
+	/* Display proporties */
+	
+	
+	/* Font proporties */
+	
+	
+	/* Visual proporties */
+	color: #9aa0a6;;
+	transition: 0.2s ease-out;
 }
 
 .nav .nav-group .btn-menu {
@@ -43,6 +59,7 @@
 }
 
 .nav .nav-group .btn-menu #btn-check {
+	/* Display proporties */
 	display: none;
 }
 
@@ -50,10 +67,12 @@
 	/* Display proporties */
 	height: 100%;
 	display: flex;
+
+	/* Font proporties */
+	
 }
 
 .nav .nav-group .static-menu a {
-	
 	/* Display proporties */
 	margin: auto 0.8rem;
 	width: fit-content;
@@ -76,7 +95,19 @@
 }
 
 @media only screen and (max-width: 650px) {
+
+	.nav {
+		/* Display proporties */
+		justify-content: space-around;
+	}
+
+	.nav .nav-group {
+		/* Display proporties */
+		padding: 0 1rem !important;
+	}
+
 	.nav .nav-group .btn-menu .btn-icon {
+		/* Display proporties */
 		display: flex;
 	}
 
@@ -106,6 +137,7 @@
 	}
 
 	.nav .nav-group .btn-menu {
+		/* Display proporties */
 		display: flex;
 	}
 
@@ -117,7 +149,6 @@
 	}
 
 	.nav .nav-group .btn-menu .btn-icon i:hover {
-	
 		/* Visual proporties */
 		color: #ffffff !important;
 		background-color: #ffffff10;
@@ -125,13 +156,11 @@
 	}
 
 	.nav .nav-group .btn-menu #btn-check:checked + .btn-icon > i:hover {
-
 		/* Visual proporties */
 		color: #ffffff !important;
 	}
 	
 	.nav .nav-group .btn-menu #btn-check:checked + .btn-icon > i {
-	
 		/* Visual proporties */
 		color: #BABBBE !important;
 		background-color: #ffffff15;
@@ -154,6 +183,7 @@
 	}
 
 	.nav .nav-group .static-menu {
+		/* Display proporties */
 		display: none;
 	}
 
@@ -203,3 +233,10 @@
 	}
 }
 
+@media only screen and (max-width: 700px) {
+
+	.nav .nav-group {
+		/* Display proporties */
+		padding: 0 2rem !important;
+	}
+}

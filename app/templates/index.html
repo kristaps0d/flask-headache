@@ -11,10 +11,18 @@
 		
 		<div class="backdrop"></div>
 
-		<div class="input-group">
-			<input type="text" class="form-control" placeholder="Istabiņas žetons">
-			<button class="button">search</button>
+		<div class="card">
+
+			<h2>
+				Tava iespēja veicināt izmaiņas!
+			</h2>
+
+			<form class="input-group" action="/public/">
+				<input type="text" id="form" class="form-control" placeholder="Istabiņas žetons">
+				<label class="icon" for="form">search</label>
+			</form>
 		</div>
 
+		<script type="text/javascript" src="{{ url_for('static', filename='assets/js/submit.js') }}"></script>
 	</div>
 {% endblock %}
