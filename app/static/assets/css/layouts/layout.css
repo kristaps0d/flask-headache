@@ -1,4 +1,5 @@
-@import "../essentials/fonts.css";
+@import '../essentials/fonts.css';
+@import '../essentials/components.css';
 
 html, body {
 	/* Display proporties */

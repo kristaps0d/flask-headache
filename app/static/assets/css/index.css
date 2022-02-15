@@ -1,7 +1,3 @@
-.container {
-
-}
-
 .container .backdrop {
 	/* Display proporties */
 	width: 100%;
@@ -13,9 +9,6 @@
 	left: 0%;
 	z-index: -1;
 
-	/* Font proporties */
-	
-	
 	/* Visual proporties */
 	overflow: hidden;
 
@@ -24,50 +17,9 @@
 	background-position: center !important;
 }
 
-.container .input-group {
+/* Input-group */
+.input-group {
 	/* Display proporties */
-	display: flex;
-	
-	/* Font proporties */
-	
-	
-	/* Visual proporties */
-	border: 2px black solid;
-	border-radius: 2rem;
-}
-
-.container .input-group span {
-	/* Display proporties */
-	
-	
-	/* Font proporties */
-	font-family: 'Material Icons'
-	
-	/* Visual proporties */
-	
-}
-
-.container .input-group .form-control {
-	/* Display proporties */
-	width: 80%;
+	width: 60%;
 	height: 3rem;
-	margin: auto;
-
-	/* Font proporties */
-	font-family: 'Open sans';
-	font-size: 2rem;
-	
-	/* Visual proporties */
-	background: none;
-}
-
-.container .input-group .form-control::after {
-	/* Display proporties */
-	
-	
-	/* Font proporties */
-	font-family: 'Material Icons';
-	
-	/* Visual proporties */
-	content: "search";
 }
