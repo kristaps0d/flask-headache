@@ -1,24 +1,20 @@
-const state = document.getElementById("btn-check");
-const c = document.getElementById("collapse-menu")
-const s = document.getElementById("static-menu");
-
-state.addEventListener("change", function(e) {
-	if (e.target.checked) {
-		c.style.display = "flex";
-	} else {
-		c.style.display = "none";
-	}
-});
-
-window.addEventListener("resize", function(e) {
-	if (state.checked) {
-		if (this.screen.width > 650) {
-			state.checked = false;
-			c.style.display = "none";
+$(function() {
+	$('#btn-check').change(function(e) {
+		if (e.target.checked) {
+			$('#collapse-menu').css('display', 'flex');
+		} else {
+			$('#collapse-menu').css('display', 'none');
 		}
-	}
-});
+	});
 
-window.addEventListener("beforeunload", function() {
-	state.checked = false;
+	$(window).resize(function(e) {
+		if ($(window).width() > 650) {
+			$('#btn-check').prop('checked', false);
+			$('#collapse-menu').css('display', 'none');
+		}
+	});
+
+	if ($('#btn-check').is(':checked')) {
+		$('#collapse-menu').css('display', 'flex');
+	}
 });

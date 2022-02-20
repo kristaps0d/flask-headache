@@ -1,7 +1,3 @@
-@import '../essentials/index.css';
-@import '../components/index.css';
-@import '../includes/index.css';
-
 html, body {
 	/* Display proporties */
 	height: 100%;

@@ -40,14 +40,8 @@
 }
 
 .nav .nav-group .nav-display a:hover {
-	/* Display proporties */
-	
-	
-	/* Font proporties */
-	
-	
 	/* Visual proporties */
-	color: #9aa0a6;;
+	color: #9aa0a6;
 	transition: 0.2s ease-out;
 }
 
@@ -67,9 +61,6 @@
 	/* Display proporties */
 	height: 100%;
 	display: flex;
-
-	/* Font proporties */
-	
 }
 
 .nav .nav-group .static-menu a {

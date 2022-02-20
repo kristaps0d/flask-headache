@@ -8,13 +8,19 @@
 
 		<title>{% block title %}{% endblock %}</title>
 
-		<link rel="icon" href="{{ url_for('static', filename='assets/img/favicon.svg') }}" type="image/svg+xml">
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/layouts/layout.css') }}">
+		<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+		<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/layouts/layout.css') }}"> -->
+
+		{% assets "layout_css" %}
+			<link rel="stylesheet" href="{{ ASSET_URL }}">
+		{% endassets %}
 
 		{% block stylesheet %}{% endblock %}
 	</head>
 	<body>
-		{% include 'includes/header.html' %}
+		{% assets "jquery_lib" %}
+			<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+		{% endassets %}
 		{% block content %}{% endblock %}
 	</body>
 </html>

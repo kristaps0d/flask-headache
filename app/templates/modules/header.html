@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <div class="wrapper">
 	<div class="nav">
 
@@ -26,5 +27,8 @@
 	<div class="collapse-menu" id="collapse-menu">
 		{% include 'components/links.html' %}
 	</div>
-	<script type="text/javascript" src="{{ url_for('static', filename='assets/js/header.js') }}"></script>
+	
+	{% assets "header_js" %}
+		<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	{% endassets %}
 </div>

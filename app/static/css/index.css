@@ -1,0 +1,43 @@
+.container .backdrop {
+  /* Display proporties */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* Position proporties */
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  /* Visual proporties */
+  overflow: hidden;
+  /* background-image: url('../img/backdrop.png'); */
+  background-size: cover !important;
+  background-position: center !important; }
+
+/* Page content card */
+.card {
+  /* Display proporties */
+  width: 80%;
+  margin: auto;
+  /* Font proporties */
+  /* Visual proporties */ }
+
+.card h2 {
+  /* Display proporties */
+  padding: 0 1rem;
+  /* Font proporties */
+  font-family: 'Montserrat';
+  font-weight: 200;
+  /* Visual proporties */
+  color: #5f6368; }
+
+/* Input-group */
+.input-group {
+  /* Display proporties */
+  width: 100%;
+  height: 3rem; }
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
