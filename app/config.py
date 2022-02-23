@@ -11,7 +11,7 @@ dotenv.load_dotenv()
 secret_key = os.getenv('SECRET_KEY')
 if secret_key is None:
 	print('\n	Missing "SECRET_KEY" from .ENV')
-	print('	[Auto generated key]: ' + token_urlsafe(16))
+	print('	[Auto generated key]: ' + token_urlsafe(16) + '\n')
 
 database_uri = os.getenv('DATABASE_URI')
 if database_uri is None:

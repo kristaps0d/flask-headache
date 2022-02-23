@@ -1,19 +1,32 @@
 $(function() {
+	// On page load event
 	$('#form-control').on('keyup', function(e) {
 		if (e.which == 13) {
-			console.log(e.target.value);
-
 			target_url = '/session/reserve/' + e.target.value;
+
+			$('.icon').text('refresh');
+			$('.form-control').addClass('disabled');
 
 			$.ajax({
 				'url': target_url,
 				'type': 'GET',
 				'success': function(t) {
-					// console.log(t);
-					location.href = "/session/" + e.target.value;
+					url = "/session/" + e.target.value;
+					setTimeout(function() {
+						$(location).attr('href', url);
+					}, 10);
+
+					$('.icon').text('search');
+					$('.form-control').removeClass('disabled');
 				},
 				'error': function(t) {
-					// console.log(t);
+					$('.message').addClass("visible");
+					setTimeout(function() {
+						$('.message').removeClass("visible");
+					}, 1500);
+					
+					$('.icon').text('search');
+					$('.form-control').removeClass('disabled');
 				}
 			});
 		}

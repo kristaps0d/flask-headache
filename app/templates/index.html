@@ -7,7 +7,7 @@
 	{% endassets %}
 {% endblock %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Pievienojies!{% endblock %}
 
 {% block content %}
 	{% include 'modules/header.html' %}
@@ -16,17 +16,16 @@
 		<div class="backdrop"></div>
 
 		<div class="card">
-
-			<h2>
-				Tava iespēja veicināt izmaiņas!
-			</h2>
-
-			<div class="input-group">
-				<input type="text" id="form-control" class="form-control" placeholder="Istabiņas žetons">
-				<label class="icon" for="form-control">search</label>
-				{% if wrong == True %}
-					<span>Incorrect room</span>
-				{% endif %}
+			<div class="wrapper">
+				<h1>
+					Tava iespēja veicināt izmaiņas!
+				</h1>
+	
+				<div class="input-group">
+					<label class="icon" for="form-control">search</label>
+					<input type="text" id="form-control" class="form-control" placeholder="Istabiņas žetons">
+					<span class="message">Istabiņa netika atrasta (╯°□°）╯︵ ┻━┻</span>
+				</div>
 			</div>
 		</div>
 

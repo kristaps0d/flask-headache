@@ -1,0 +1,187 @@
+/* Header */
+.wrapper {
+	/* Display proporties */
+	width: 100%;
+	height: 5rem;
+
+	/* Font proporties */
+	font-family: 'Open sans';
+	font-weight: 400;
+}
+
+.nav {
+	/* Display proporties */
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+  	justify-content: space-around;
+
+	/* Visual proporties */
+	color: var(--color-base-white);
+	background-color: var(--color-background-primary);
+	box-shadow: 0px 1px 13px 1px rgba(0, 0, 0, 0.623);
+}
+
+
+/* Collapse menu button */
+.btn-menu {
+	/* Display proporties */
+	height: 100%;
+	display: flex;
+
+	/* Font proporties */
+	font-family: 'Material Icons';
+}
+
+.btn-menu #btn-check {
+	/* Display proporties */
+	display: none;
+}
+
+.btn-menu .btn-icon {
+	/* Display proporties */
+	display: flex;
+}
+
+.btn-menu .btn-icon i {
+	/* Display proporties */
+	height: 2.5rem;
+	width: 2.5rem;
+	margin: auto;
+
+	/* Font proporties */
+	font-family: "Material Icons";
+	font-style: normal;
+	font-size: 2.25rem;
+	font-weight: 400;	
+
+	text-align: center;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+
+	/* Visual proporties */
+	color: var(--color-base-white);
+	border-radius: 50%;
+	transition: 0.2s ease-out;
+}
+
+.btn-menu #btn-check:not(:checked) + .btn-icon > i::before {
+	/* Font proporties */
+	content: "menu";
+}
+
+.btn-menu #btn-check:checked + .btn-icon > i::before {
+	/* Font proporties */
+	content: "close";
+}
+
+/* Room information display */
+.display-wrapper {
+	/* Display proporties */
+	margin: auto;
+	display: flex;
+	padding: 0 2rem;
+	position: relative;
+	height: calc(100% - 0.55rem);
+
+	/* Font proporties */
+	text-transform: uppercase;
+
+	/* Visual proporties */
+	background-color: var(--color-background-primary);
+}
+
+h1 {
+	/* Display proporties */
+	height: fit-content;
+	margin: auto 0;
+
+	/* Font proporties */
+	font-weight: 400;
+}
+
+.display-wrapper .data {
+	/* Display proporties */
+	padding-left: 0.25rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+.display-wrapper .data::before {
+	/* Font proporties */
+	font-style: normal;
+	content: '"';
+}
+.display-wrapper .data::after {
+	/* Font proporties */
+	font-style: normal;
+	content: '"';
+}
+
+.display-wrapper .msg {
+	/* Display proporties */
+	display: flex;
+	position: absolute;
+	margin: auto auto;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	height: 100%;
+	width: 100%;
+	
+	/* Font proporties */
+	font-size: 0.75rem;
+	text-align: right;
+	pointer-events: none;
+}
+
+.msg .upper {
+	/* Display proporties */
+	margin: auto 0;
+	margin-left: calc(100% / 5 * 3 - 0.2rem);
+	padding-bottom: 3rem;
+
+	/* Font proporties */
+	font-weight: 600;
+	font-style: normal;
+	
+	/* Visual proporties */
+	transition: 300ms ease-out;
+}
+
+.msg .lower {
+	/* Display proporties */
+	margin: auto 0;
+	margin-left: calc(100% / 8 - 0.6rem);
+	padding-top: 2.5rem;
+
+	/* Font proporties */
+	font-weight: 600;
+	font-style: italic;
+}
+
+.msg .clipboard {
+	/* Visual proporties */
+	opacity: 0;
+	color: var(--color-base-primary);
+	transition: 200ms ease-out;
+}
+
+.msg .visible {
+	/* Visual proporties */
+	opacity: 1;
+	color: var(--color-base-taint);
+	transition: 250ms ease-out;
+}
+
+.msg .expiry {
+	/* Font proporties */
+	color: var(--color-base-taint);
+}

@@ -3,4 +3,5 @@
 *.env
 *.sqlite3
 *.sqlite
-src/static/tmp
+*.code-workspace
+*cache

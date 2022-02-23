@@ -1,14 +1,14 @@
 @font-face {
 	font-family: "Material Icons";
-	src: url("../../fonts/MaterialIcons.ttf");
+	src: url("/static/fonts/MaterialIcons.ttf");
 }
 
 @font-face {
 	font-family: "Montserrat";
-	src: url("../../fonts/Montserrat.ttf");
+	src: url("/static/fonts/Montserrat.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
-	src: url("../../fonts/OpenSans.ttf");
+	src: url("/static/fonts/OpenSans.ttf");
 }

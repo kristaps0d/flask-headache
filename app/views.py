@@ -1,10 +1,8 @@
 # Flask modules
-from flask import render_template, redirect, request, g, session
+from flask import render_template, request, g, session
 
 # App modules
 from app import app, models
-
-# from app import dev_views	# FOR DEVELOPMENTAL PURPUSES, PURGE AFTER
 
 # App main route
 @app.route('/', defaults={'path': 'index.html'})
@@ -14,19 +12,42 @@ from app import app, models
 def index():
 	return render_template('index.html', wrong=False)
 
-@app.route('/u/<path>')
-def my(path):
-	try:
-		return render_template(f'u/{path}.html')
-	except:
-		return render_template('page-404.html')
+@app.route('/session/<string:route>', methods=['post', 'get'])
+def Session(route):
+	row = models.Sessions.query.filter_by(room=route).first()
+	if row is None: return "", 404
+	
+	if request.method == "POST":
+		pass
+	else:
+		return render_template('/view.html', room=route, expiry="2h 24m 12s")
 
-@app.route('/session/<path>')
-def room(path):
-	try:
-		return '<h1>HELOS</h1>'
-	except:
-		return render_template('page-404.html')
+@app.route('/session/reserve/<route>')
+def Reserve(route):
+	row = models.Sessions.query.filter_by(room=route).first()
+	if row is None: return "", 404
+	return "", 200
+
+@app.route('/session/create', methods=['get', 'post'])
+def Create():
+	if request.method == 'POST':
+		
+		req = request.form
+
+		room = req['room']
+		title = req['title']
+		password = req['password']
+		tokens = req['tokens']
+
+		try:
+			session = models.Sessions(room=room, title=title, password=password)
+			session.tokens(int(tokens)).save()
+		except:
+			return '', 400
+
+		return '', 200
+	else:
+		return render_template('create.html')
 
 @app.route('/session/reserve/<room>')
 def session(room):

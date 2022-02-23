@@ -1,0 +1,22 @@
+:root, [data-theme="darkmode"] {
+	
+	/* navbar */
+	--color-text-navbar-default: rgb(255, 255, 255);
+	--color-text-navbar-active: rgb(187, 188, 191);
+	--color-text-navbar-hover: rgb(155, 161, 166);
+
+	--color-navbar-primary: rgb(60, 64, 68);
+	--color-navbar-secondary: rgb(31, 32, 35);
+
+	/* main */
+	--color-background-primary: rgb(31, 32, 35);
+	--color-background-secondary: rgb(61, 55, 55);
+	--color-background-tertiary: rgb(44, 45, 47);
+
+	/* Bases */
+	--color-base-primary: rgb(139, 181, 248);
+	--color-base-secondary: rgb(69, 88, 128);
+	--color-base-white: rgb(255, 255, 255);
+	--color-base-taint: rgb(155, 161, 166);
+
+}

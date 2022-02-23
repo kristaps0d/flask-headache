@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+{% assets "header_css" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+{% endassets %}
+
 <div class="wrapper">
 	<div class="nav">
 
@@ -23,7 +27,6 @@
 			
 		</div>
 	</div>
-	
 	<div class="collapse-menu" id="collapse-menu">
 		{% include 'components/links.html' %}
 	</div>

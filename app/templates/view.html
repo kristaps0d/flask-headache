@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block stylesheet %}
+	{% assets "view_css" %}
+		<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+{% endblock %}
+
+{% block content %}	
+	<div class="wrapper">
+		<div class="nav">
+			<div class="nav-group">
+
+				<div class="btn-menu">
+					<input type="checkbox" id="btn-check"/>
+					<label class="btn-icon" for="btn-check">
+						<i></i>
+					</label>
+				</div>
+
+			</div>
+			<div class="nav-group">
+				
+			</div>
+			<div class="nav-group">
+
+				<div class="display-wrapper">
+					<h1 class="display">Istabiņa,</h1>
+					<h1 class="data">{{room}}</h1>
+					<div class="msg">
+						<span class="upper clipboard">Nokopēts!</span>
+					</div>
+					<div class="msg">
+						<span class="lower expiry">exp: {{ expiry }}</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		{% assets "view_js" %}
+			<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+		{% endassets %}
+	</div>
+	
+	<div class="container">
+
+	</div>
+{% endblock %}
