@@ -42,10 +42,9 @@ def Create():
 		try:
 			session = models.Sessions(room=room, title=title, password=password)
 			session.tokens(int(tokens)).save()
+			return '', 200
 		except:
 			return '', 400
-
-		return '', 200
 	else:
 		return render_template('create.html')
 
